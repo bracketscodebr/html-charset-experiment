@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page">
+        <header class="page__header">
+            <h1 class="page__header-title"><span> CHARSET</span> <span>EXPERIMENT</span></h1>
+        </header>
+        <section class="page__simulator">
+            <div class="page__charset-list">
+                <select class="charsets">
+                    <option value="utf-8" selected>UTF-8</option>
+                    <option value="iso-8859-1" selected>ISO-8859-1</option>
+                    <option value="big5">BIG5</option>
+                    <option value="euc-kr">EUC-KR</option>
+                </select>
+                <button class="button">Mudar charset</button>
+            </div>
+            <iframe class="page__alphabet-iframe" src="../html-charset/utf-8/index.html" frameborder="0"></iframe>
+        </section>
+        <footer class="page__footer">
+            <img class="page__footer-logo" src="../html-charset/images/logo.svg" alt="logo bracketscode">
+        </footer>
+    </div>
+    <script>
+        function generateAlphabeteIframeSource(charsetPage) {
+            return `../html-charset/${charsetPage}/index.html`;
+        }
+        window.addEventListener("load", function (event) {
+            const CHARSETS = document.querySelector('.charsets');
+            const BUTTON_CHANGE_CHARSET = document.querySelector('.button');
+            const ALPHABET_IFRAME = document.querySelector(".page__alphabet-iframe");
+
+            BUTTON_CHANGE_CHARSET.addEventListener('click', function (e) {
+                e.preventDefault();
+                const CHARSET_OPTION_SELECTED = CHARSETS.options[CHARSETS.selectedIndex];
+                ALPHABET_IFRAME.setAttribute('src', generateAlphabeteIframeSource(CHARSET_OPTION_SELECTED.value))
+            })
+        });
+    </script>
+</body>
+
+</html>

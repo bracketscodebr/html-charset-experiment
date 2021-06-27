@@ -1,0 +1,120 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.page {
+    background: #efeded;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.page__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__header-title {
+    font-size: 7rem;
+}
+.page__header-title span:first-of-type{
+    color: #5D63FA;
+}
+.page__header-title span:last-of-type{
+    color: #000;
+}
+.page__simulator{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+}
+.page__alphabet,
+.page__charset-list
+ {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+.page__charset-list {
+    width: 29%;
+    border: solid 2px #000;
+    background: #fff;
+}
+.page__charset-list select{
+    width: 100%;
+    padding: 20px;
+    font-size: 19px;
+    border: solid 2px #5d63fa;
+    color: #5d63fa;
+}
+.page__charset-list button{
+    width: 100%;
+    padding: 14px;
+    font-size: 20px;
+    font-weight: bolder;
+    background: #5D63FA;
+    color: #fff;
+    transition: ease-in 0.5s;
+
+}
+.page__charset-list button:hover {
+    background: #4e53d2;
+}
+.page__alphabet-iframe {
+    width: 69%;
+    border: solid 2px;
+    background: #fff;
+}
+.page__alphabet p{
+    width: 60px;
+    height: 60px;
+    border: solid 2px;
+    text-align: center;
+    font-weight: bolder;
+    transition: ease-in 0.5s;
+    cursor: pointer;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+.page__alphabet p:hover
+ {
+    background: #4e53d2;
+    border-color: #4044b3;
+    color: #fff;
+    transform: scale(1.2);
+}
+.page__footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page__footer-logo{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+
+}
