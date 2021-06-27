@@ -29,15 +29,15 @@
                 </select>
                 <button class="button">Mudar charset</button>
             </div>
-            <iframe class="page__alphabet-iframe" src="../html-charset/utf-8/index.html" frameborder="0"></iframe>
+            <iframe class="page__alphabet-iframe" src="../html-charset-experiment/utf-8/index.html" frameborder="0"></iframe>
         </section>
         <footer class="page__footer">
-            <img class="page__footer-logo" src="../html-charset/images/logo.svg" alt="logo bracketscode">
+            <img class="page__footer-logo" src="../html-charset-experiment/images/logo.svg" alt="logo bracketscode">
         </footer>
     </div>
     <script>
         function generateAlphabeteIframeSource(charsetPage) {
-            return `../html-charset/${charsetPage}/index.html`;
+            return `../html-charset-experiment/${charsetPage}/index.html`;
         }
         window.addEventListener("load", function (event) {
             const CHARSETS = document.querySelector('.charsets');

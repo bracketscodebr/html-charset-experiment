@@ -18,7 +18,6 @@ body {
     background: #efeded;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100vh;
 }
 
@@ -111,10 +110,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
 }
 .page__footer-logo{
     width: 100%;
     max-width: 200px;
     height: auto;
+
 
 }
